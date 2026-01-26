@@ -1,0 +1,9 @@
+name: Contexts
+on:
+  workflow_dispatch:                       # 手動実行イベント
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${ { github.actor } }"   # ワークフロー名の参照    
