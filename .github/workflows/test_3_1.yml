@@ -3,7 +3,7 @@ on:
   workflow_dispatch:                       # 手動実行イベント
 
 jobs:
-#  print:
+  print:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ github.repository }}"   # ワークフロー名の参照    
