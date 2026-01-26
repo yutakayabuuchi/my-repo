@@ -1,7 +1,7 @@
 name: Hello                       # ワークフロー名
 on: push                          # イベント（プッシュ時に起動）
 jobs:                             # ジョブの定義
-  hello_pushしたら動くで:                          # ジョブID
+  hello_when_hello:                          # ジョブID
     runs-on: ubuntu-latest        # ランナー（Ubuntuで実行）
     steps:                        # ステップの定義
       - run: echo "Hello, world"  # シェルコマンドの実行

@@ -6,4 +6,4 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.repository }}"   # ワークフロー名の参照    
+      - run: echo "${{ github.event }}"   # ワークフロー名の参照    
