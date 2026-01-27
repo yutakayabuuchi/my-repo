@@ -4,6 +4,6 @@ jobs:
   print:
     runs-on: ubuntu-latest
     env:
-      USERNAME: ${{ vars.actor }} # varsコンテキストactorの値を、環境変数USERNAMEにセット
+      USERNAME_LOCAL: ${{ vars.USERNAME }} # varsコンテキストUSERNAMEの値を、環境変数USERNAMEにセット
     steps:
-      - run: echo "${USERNAME}" # 環境変数USERNAMEの値(Variables)を表示
+      - run: echo "${USERNAME_LOCAL}" # 環境変数USERNAMEの値(Variables)を表示
