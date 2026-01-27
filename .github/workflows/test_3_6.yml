@@ -3,7 +3,7 @@ on: push
 jobs:
   print:
     runs-on: ubuntu-latest
-    env
+    env:
       PASSWORD_LOCAL: ${{ secrets.PASSOWORD}}   # secretsコンテキストに、GitHubに設定されているSecretsの環境変数がある
     steps:
       - run: echo "${PASSOWORD_LOCAL}"                  # ログ出力はマスクされる
