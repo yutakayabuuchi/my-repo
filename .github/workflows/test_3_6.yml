@@ -7,4 +7,4 @@ jobs:
       PASSWORD_LOCAL: ${{ secrets.PASSOWORD}}   # secretsコンテキストに、GitHubに設定されているSecretsの環境変数がある
     steps:
       - run: echo "${PASSOWORD_LOCAL}"                  # ログ出力はマスクされる
-      - run: echo "${PASSWORD:0:1} ${PASSWORD_LOCAL#?}" # ログ出力はマスクされない
+      - run: echo "${PASSWORD_LOCAL:0:1} ${PASSWORD_LOCAL#?}" # ログ出力はマスクされない
