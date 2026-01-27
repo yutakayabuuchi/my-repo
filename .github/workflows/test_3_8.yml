@@ -1,0 +1,11 @@
+name: Compare functions
+on: push
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+	steps:
+	  - run: printenv | grep '_FUNC'
+	    env:
+		  CONTAINS_FUNC: ${{ contains('Hello', 'ell') }}     # 第一引数が、第二引数のellを含んでいたらtrue
+		  STARTS_WITH_FUNC: ${{ startsWith('Hello', 'He') }} # 第一引数が、第二引数のHeで始まっていたらtrue
+		  ENDS_WITH_FUNC: ${{ endsWith('Hello','lo') }}      # 第一引数が、第二引数のloで終わっていたらtrue
