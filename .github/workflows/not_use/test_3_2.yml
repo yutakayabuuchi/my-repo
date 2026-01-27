@@ -1,5 +1,5 @@
 name: Environment variables
-on: push
+on: workflow_dispatch:
 jobs:
   BRANCH:
     runs-on: ubuntu-latest
